@@ -29,13 +29,14 @@
             scope: {
                 ngModel: '=',
                 title: '@',
-                valueN: '=',
+                optionLabel: '@',
                 values: '='
             },
+            //buscar e intentar con compile, para poder pasar o utilizar optionLabel en el md-option
             template: "<md-input-container>\
                            <label>{{title}}</label>\
                            <md-select data-ng-model='ngModel'>\
-                               <md-option data-ng-repeat='state in values' value='{{state.abbrev}}'>{{state.abbrev}}</md-option>\
+                               <md-option data-ng-repeat='object in values' value='{{object.optionLabel}}'>{{object[{{optionLabel}}] }}</md-option>\
                            </md-select>\
                        </md-input-container>"
         };
