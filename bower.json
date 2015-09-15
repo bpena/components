@@ -11,7 +11,7 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "angular-ui-router": "~0.2.15",
-    "angular-material": "~0.10.1",
-    "angular-messages": "~1.4.5"
+    "angular-messages": "~1.4.5",
+    "angular-material": "0.11.0"
   }
 }
