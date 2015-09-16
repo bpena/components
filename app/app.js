@@ -4,11 +4,11 @@
     // Declare app level module which depends on views, and components
     angular
         .module('myApp', [
-            'components',
+            'directives',
             'ngMaterial',
             'ngMessages'
         ])
-        .controller('MyController', ['$scope', function($scope) {
+        .controller('MyController', ['$scope', function() {
             var vm = this;
             vm.valor = 30;
 
@@ -19,10 +19,13 @@
 
             console.log(vm.states);
         }])
+/*
         .config(function($mdThemingProvider) {
             $mdThemingProvider.theme('docs-dark', 'default')
                 .dark();
-        });
+        })
+*/
+    ;
 
 })();
 

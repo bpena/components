@@ -17,7 +17,7 @@
 </head>
 <body ng-controller="MyController as ctrl">
     <md-content ng-controller="MyController" md-theme="default" layout="row" layout-sm="column">
-        <span data-pt-input title="Hola" data-ng-model="ctrl.valor"></span>
+        <input data-pt-input title="Hola" data-ng-model="ctrl.valor" placeholder="nano" type="text">
         <span data-pt-input title="Hola" data-ng-model="ctrl.valor"></span>
     </md-content>
 
@@ -35,11 +35,11 @@
                 </md-input-container>
                 <span data-pt-select title="State" data-ng-model="ctrl.userState" data-option-label="abbrev" values="ctrl.states"></span>
                 <md-input-container>
-                    <label>State</label>
-                    <md-select ng-model="ctrl.userState">
-                        <md-option ng-repeat="state in ctrl.states" value="{{state.abbrev}}">{{state.abbrev}}</md-option>
-                    </md-select>
-                </md-input-container>
+                <label>State</label>
+                <md-select ng-model="ctrl.userState">
+                    <md-option ng-repeat="state in ctrl.states" value="{{state.abbrev}}">{{state.abbrev}}</md-option>
+                </md-select>
+            </md-input-container>
             </div>
         </div>
     </div>
@@ -47,15 +47,31 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- In production use:
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-    -->
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.js"></script>
-    <script src="bower_components/angular-messages/angular-messages.js"></script>
-    <script src="bower_components/angular-material/angular-material.js"></script>
-    <script src="directives/input/input.directive.js"></script>
-    <script src="app.js"></script>
+</md-content>
+
+<md-content>
+  <h4>Standard date-picker</h4>
+  <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>
+  <h4>Disabled date-picker</h4>
+  <md-datepicker ng-model="myDate" placeholder="Enter date" disabled></md-datepicker>
+  <h4>Date-picker with min date and max date</h4>
+  <md-datepicker ng-model="myDate" placeholder="Enter date"
+                 md-min-date="minDate" md-max-date="maxDate"></md-datepicker>
+</md-content>
+</section>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-aria/angular-aria.js"></script>
+  <script src="bower_components/angular-messages/angular-messages.js"></script>
+  <script src="bower_components/angular-material/angular-material.js"></script>
+  <script src="directives/input/input.directive.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
